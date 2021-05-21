@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Paypal Payment</title>
+    <title>Mercedes-Benz Payment</title>
 <!-- <link
       href="assets/bootstrap/css/bootstrap.min.css"
       rel="stylesheet"
@@ -47,8 +47,8 @@
                                     <input type="text" class="font-title" id="multiplier" value="0">
                                     
                                 </div>
-                                <button class="calcPrice">Calculate Price</button> |
-                                <button type="button" >Delete From Cart</button>
+                                <button type="button" class="calcPrice">Calculate Price</button> |
+                                <button type="reset" class="deleteCart" >Delete From Cart</button>
                             </div>
                         </div>
                         <div >
@@ -146,7 +146,13 @@ $(".calcPrice").on(
      priceHolder3 = document.getElementById("price3");
    priceHolder3.innerHTML = "R " + multiPrice;
   });
-       
+      
+      
+  $(".deleteCart").on(
+  "click",
+  function () { 
+    $("#multiplier").innerHTML = 0;
+   })  
    </script>
 </body>
 </html>

@@ -18,15 +18,11 @@ paypal
     onApprove: function (data, actions) {
       return actions.order.capture().then(function (details) {
         console.log(details);
-        window.location.replace(
-          "http://localhost:63342/tutorial/paypal/success.html"
-        );
+        window.location.replace("success.html");
       });
     },
     onCancel: function (data) {
-      window.location.replace(
-        "http://localhost:63342/tutorial/paypal/Oncancel.html"
-      );
+      window.location.replace("Oncancel.html");
     },
   })
   .render("#paypal-payment-button");
